@@ -4,6 +4,6 @@ text = gets.chomp.downcase.gsub(/[[:punct:]]/, '')
 words = text.split(" ")
 frequencies = Hash.new(0)
 words.each{ |word| frequencies[word] += 1 }
-requencies = frequencies.sort_by{ |word, count| count }
+frequencies = frequencies.sort_by{ |word, count| count }
 frequencies.reverse!
 frequencies.each{ |word, count| puts "#{word}: #{count}"}
